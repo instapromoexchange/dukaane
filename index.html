@@ -76,6 +76,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
+            cursor: pointer;
         }
         
         .logo img {
@@ -1054,7 +1055,7 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <div class="logo">
+                <div class="logo" data-page="home">
                     <img src="https://res.cloudinary.com/digyet8lg/image/upload/v1762932081/download_1_rjaerj.png" alt="Dukaane Logo">
                     <h1>Dukaane</h1>
                 </div>
@@ -1098,8 +1099,8 @@
             </div>
         </section>
 
-        <!-- Apps Section -->
-        <section class="apps-section" id="apps-section">
+        <!-- Apps Preview Section -->
+        <section class="apps-section">
             <div class="container">
                 <div class="section-title">
                     <h2>Our Apps</h2>
@@ -1142,11 +1143,14 @@
                         </div>
                     </div>
                 </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="#" class="cta-button" data-page="apps">View All Apps <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </section>
 
         <!-- How It Works -->
-        <section class="how-it-works" id="how-it-works-section">
+        <section class="how-it-works">
             <div class="container">
                 <div class="section-title">
                     <h2>How It Works</h2>
@@ -1173,7 +1177,7 @@
         </section>
 
         <!-- Testimonials -->
-        <section class="testimonials" id="testimonials-section">
+        <section class="testimonials">
             <div class="container">
                 <div class="section-title">
                     <h2>What Our Users Say</h2>
@@ -1213,6 +1217,109 @@
                 </div>
             </div>
         </section>
+    </section>
+
+    <!-- Apps Page -->
+    <section id="apps" class="page-content">
+        <div class="page-header">
+            <div class="container">
+                <div class="page-header-content">
+                    <h1>Our Apps</h1>
+                    <p>Discover our suite of apps designed to transform local shopping</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="apps-section">
+                <div class="apps-grid">
+                    <!-- App 1 -->
+                    <div class="app-card app-1">
+                        <div class="app-icon">
+                            <img src="https://res.cloudinary.com/digyet8lg/image/upload/v1762932081/download_1_rjaerj.png" alt="Dukaane App">
+                        </div>
+                        <div class="app-content">
+                            <h3>Dukaane</h3>
+                            <p>Discover and shop from local stores in your city. Find products, compare prices, and support local businesses from the comfort of your home.</p>
+                            <div style="margin-bottom: 15px;">
+                                <h4 style="color: var(--primary); margin-bottom: 10px;">Key Features:</h4>
+                                <ul>
+                                    <li>Browse local shops in your area</li>
+                                    <li>Search and filter products</li>
+                                    <li>Secure online payments</li>
+                                    <li>Real-time order tracking</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="download-btn"><i class="fas fa-download"></i> Download Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- App 2 -->
+                    <div class="app-card app-2">
+                        <div class="app-icon">
+                            <img src="https://res.cloudinary.com/digyet8lg/image/upload/v1762932081/download_1_rjaerj.png" alt="Local Shop Manager App">
+                        </div>
+                        <div class="app-content">
+                            <h3>Local Shop Manager</h3>
+                            <p>For shop owners - easily bring your store online, manage inventory, process orders, and reach more customers in your locality.</p>
+                            <div style="margin-bottom: 15px;">
+                                <h4 style="color: var(--primary); margin-bottom: 10px;">Key Features:</h4>
+                                <ul>
+                                    <li>Easy product catalog management</li>
+                                    <li>Order processing and tracking</li>
+                                    <li>Inventory management</li>
+                                    <li>Customer analytics</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="download-btn"><i class="fas fa-download"></i> Download Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- App 3 -->
+                    <div class="app-card app-3">
+                        <div class="app-icon">
+                            <img src="https://res.cloudinary.com/digyet8lg/image/upload/v1762932185/download_2_cd3pwj.png" alt="Dukaane Delivery Partner App">
+                        </div>
+                        <div class="app-content">
+                            <h3>Dukaane Delivery Partner</h3>
+                            <p>Become a delivery partner and earn by delivering products from local shops to customers. Flexible hours and good earnings.</p>
+                            <div style="margin-bottom: 15px;">
+                                <h4 style="color: var(--primary); margin-bottom: 10px;">Key Features:</h4>
+                                <ul>
+                                    <li>Flexible working hours</li>
+                                    <li>Real-time delivery requests</li>
+                                    <li>Earnings tracking</li>
+                                    <li>Route optimization</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="download-btn"><i class="fas fa-download"></i> Download Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-card">
+                <h2>Why Choose Dukaane Apps?</h2>
+                <p>Our apps are designed with simplicity and functionality in mind. Whether you're a customer looking to shop locally, a shop owner wanting to expand your business, or someone looking for flexible earning opportunities, we have the perfect app for you.</p>
+                
+                <div class="steps" style="margin-top: 40px;">
+                    <div class="step">
+                        <div class="step-number"><i class="fas fa-check"></i></div>
+                        <h3>Easy to Use</h3>
+                        <p>Intuitive interfaces designed for everyone</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Secure</h3>
+                        <p>Your data and transactions are protected</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number"><i class="fas fa-sync"></i></div>
+                        <h3>Regular Updates</h3>
+                        <p>We continuously improve our apps</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- About Us Page -->
@@ -1603,7 +1710,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Dukaane. All rights reserved.</p>
+                <p>&copy; 2023 Dukaane. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1643,6 +1750,16 @@
                     document.getElementById('mobile-menu').classList.remove('active');
                     document.getElementById('more-dropdown').classList.remove('active');
                 });
+            });
+            
+            // Set up logo click to go to home
+            document.querySelector('.logo').addEventListener('click', function() {
+                showPage('home');
+                
+                // Close mobile menu if open
+                document.getElementById('nav-links').classList.remove('active');
+                document.getElementById('mobile-menu').classList.remove('active');
+                document.getElementById('more-dropdown').classList.remove('active');
             });
             
             // Set up mobile menu toggle
