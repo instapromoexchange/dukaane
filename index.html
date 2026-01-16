@@ -7,7 +7,7 @@
     <meta name="google-site-verification" content="verification_token">
     
     <!-- Primary SEO Title -->
-    <title>Dukaane - Connect with local shops | Local Store Near Me | Fast Same Day Delivery</title>
+    <title>Dukaane - Online Grocery Delivery App | Local Kirana Store Near Me | Fast Same Day Delivery</title>
     
     <!-- Primary Meta Description -->
     <meta name="description" content="Dukaane - India's best hyperlocal online grocery delivery app. Order fresh vegetables, fruits, dairy, daily essentials from local kirana stores near you. Fast same-day delivery. Download app now!">
@@ -231,531 +231,128 @@
             padding: 0 20px;
         }
 
-       /* Header Styles - Fixed for Desktop and Mobile */
-header {
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-    max-width: 1280px;
-    margin: 0 auto;
-    width: 90%;
-}
-
-/* Logo Styles */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-    flex-shrink: 0;
-}
-
-.logo img {
-    height: 42px;
-    width: 42px;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0 3px 10px rgba(67, 97, 238, 0.15);
-}
-
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
-}
-
-.logo-text h1 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    background: linear-gradient(45deg, #4361ee, #3a0ca3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0;
-    padding: 0;
-}
-
-.logo-text span {
-    font-size: 0.75rem;
-    color: #666;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-}
-
-/* Navigation Links */
-.nav-links {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.nav-links li {
-    position: relative;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    font-size: 0.95rem;
-    padding: 0.5rem 0;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    white-space: nowrap;
-}
-
-.nav-links a i {
-    font-size: 1rem;
-    width: 20px;
-    text-align: center;
-}
-
-.nav-links a:hover {
-    color: #4361ee;
-}
-
-.nav-links a.active {
-    color: #4361ee;
-    font-weight: 600;
-}
-
-/* Dropdown Styles */
-.dropdown {
-    position: relative;
-}
-
-.dropdown > a {
-    padding-right: 20px !important;
-}
-
-.dropdown > a::after {
-    content: '▾';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.8rem;
-    transition: transform 0.3s ease;
-}
-
-.dropdown:hover > a::after {
-    transform: translateY(-50%) rotate(180deg);
-}
-
-.dropdown-content {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    min-width: 200px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    padding: 0.5rem 0;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-    z-index: 1001;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.dropdown:hover .dropdown-content {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(5px);
-}
-
-.dropdown-content a {
-    padding: 0.75rem 1.5rem !important;
-    color: #555 !important;
-    display: flex !important;
-    align-items: center;
-    gap: 10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
-    font-size: 0.9rem !important;
-}
-
-.dropdown-content a:last-child {
-    border-bottom: none;
-}
-
-.dropdown-content a:hover {
-    background: rgba(67, 97, 238, 0.05);
-    color: #4361ee !important;
-    padding-left: 1.75rem !important;
-}
-
-/* Download Button */
-.nav-links .cta-button {
-    background: linear-gradient(45deg, #4361ee, #3a0ca3);
-    color: white;
-    padding: 0.6rem 1.5rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(67, 97, 238, 0.25);
-    margin-left: 1rem;
-    white-space: nowrap;
-}
-
-.nav-links .cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(67, 97, 238, 0.35);
-    color: white;
-}
-
-.nav-links .cta-button i {
-    font-size: 0.9rem;
-}
-
-/* Mobile Menu Button */
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #4361ee;
-    cursor: pointer;
-    padding: 0.5rem;
-    z-index: 1002;
-}
-
-/* Hero Section for Reference */
-.hero {
-    padding-top: 120px; /* Make space for fixed header */
-}
-
-/* ==================== MOBILE STYLES ==================== */
-@media (max-width: 992px) {
-    .navbar {
-        padding: 0.8rem 0;
-        width: 95%;
-    }
-    
-    .nav-links {
-        gap: 1rem;
-    }
-    
-    .nav-links a {
-        font-size: 0.9rem;
-    }
-    
-    .logo-text h1 {
-        font-size: 1.4rem;
-    }
-    
-    .logo-text span {
-        font-size: 0.7rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .mobile-menu-btn {
-        display: block;
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    
-    .nav-links {
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: white;
-        flex-direction: column;
-        padding: 1.5rem;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        transform: translateY(-100%);
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: 999;
-        gap: 0;
-        max-height: calc(100vh - 70px);
-        overflow-y: auto;
-    }
-    
-    .nav-links.active {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    .nav-links li {
-        width: 100%;
-        margin: 0;
-    }
-    
-    .nav-links a {
-        padding: 1rem 0 !important;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        width: 100%;
-        font-size: 1rem !important;
-        justify-content: flex-start;
-    }
-    
-    .nav-links a i {
-        width: 24px;
-        font-size: 1.1rem;
-    }
-    
-    .dropdown > a {
-        padding-right: 0 !important;
-    }
-    
-    .dropdown > a::after {
-        right: 0;
-        position: absolute;
-    }
-    
-    .dropdown-content {
-        position: static;
-        width: 100%;
-        box-shadow: none;
-        border: none;
-        padding-left: 1.5rem;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-    }
-    
-    .dropdown.active .dropdown-content {
-        max-height: 500px;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-    }
-    
-    .dropdown-content a {
-        padding: 0.75rem 0 !important;
-        border-bottom: none !important;
-    }
-    
-    .nav-links .cta-button {
-        margin: 1rem 0 0 0;
-        padding: 0.8rem 1.5rem;
-        justify-content: center;
-        width: 100%;
-    }
-    
-    .logo {
-        margin-left: 20px;
-    }
-    
-    .logo img {
-        height: 38px;
-        width: 38px;
-    }
-    
-    .logo-text h1 {
-        font-size: 1.3rem;
-    }
-    
-    .hero {
-        padding-top: 100px;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar {
-        padding: 0.7rem 0;
-    }
-    
-    .logo {
-        margin-left: 15px;
-    }
-    
-    .logo img {
-        height: 36px;
-        width: 36px;
-    }
-    
-    .logo-text h1 {
-        font-size: 1.2rem;
-    }
-    
-    .logo-text span {
-        font-size: 0.65rem;
-    }
-    
-    .mobile-menu-btn {
-        right: 15px;
-        font-size: 1.3rem;
-    }
-    
-    .nav-links {
-        top: 65px;
-        padding: 1rem;
-    }
-    
-    .hero {
-        padding-top: 90px;
-    }
-}
-
-/* Extra Small Devices */
-@media (max-width: 360px) {
-    .logo-text h1 {
-        font-size: 1.1rem;
-    }
-    
-    .logo-text span {
-        font-size: 0.6rem;
-    }
-    
-    .logo img {
-        height: 34px;
-        width: 34px;
-    }
-}
-
-/* Tablet Landscape */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .nav-links {
-        gap: 1rem;
-    }
-    
-    .nav-links a {
-        font-size: 0.9rem;
-    }
-    
-    .nav-links .cta-button {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.85rem;
-    }
-    
-    .logo-text h1 {
-        font-size: 1.4rem;
-    }
-}
-
-/* Fix for dropdown arrow spacing */
-.dropdown > a i.fa-ellipsis-h {
-    margin-right: 5px;
-}
-
-/* Active state indicators */
-.nav-links a.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(45deg, #4361ee, #3a0ca3);
-    border-radius: 2px;
-}
-
-/* Remove bottom border for mobile dropdown items */
-@media (max-width: 768px) {
-    .nav-links a.active::after {
-        display: none;
-    }
-    
-    .nav-links a.active {
-        background: rgba(67, 97, 238, 0.05);
-        padding-left: 10px !important;
-        border-radius: 5px;
-    }
-}
-
-/* Smooth scroll for header */
-html {
-    scroll-padding-top: 80px;
-}
-
-/* Fix for hero section spacing */
-.hero-content {
-    padding-top: 40px;
-}
-
-/* Add this JavaScript for mobile dropdown functionality */
-/* Add this to your existing JavaScript */
-
-const dropdowns = document.querySelectorAll('.dropdown');
-dropdowns.forEach(dropdown => {
-    if (window.innerWidth <= 768) {
-        const dropdownLink = dropdown.querySelector('a');
-        dropdownLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            dropdown.classList.toggle('active');
-            
-            // Close other dropdowns
-            dropdowns.forEach(otherDropdown => {
-                if (otherDropdown !== dropdown) {
-                    otherDropdown.classList.remove('active');
-                }
-            });
-        });
-    }
-});
-
-// Close dropdowns when clicking outside
-document.addEventListener('click', function(e) {
-    if (!e.target.closest('.dropdown') && window.innerWidth <= 768) {
-        dropdowns.forEach(dropdown => {
-            dropdown.classList.remove('active');
-        });
-    }
-});
-
-// Mobile menu toggle
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const navLinks = document.querySelector('.nav-links');
-
-if (mobileMenuBtn) {
-    mobileMenuBtn.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-        this.innerHTML = navLinks.classList.contains('active') 
-            ? '<i class="fas fa-times"></i>' 
-            : '<i class="fas fa-bars"></i>';
-    });
-}
-
-// Close mobile menu when clicking a link
-const navLinksAll = document.querySelectorAll('.nav-links a');
-navLinksAll.forEach(link => {
-    link.addEventListener('click', function() {
-        if (window.innerWidth <= 768) {
-            navLinks.classList.remove('active');
-            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            
-            // Close all dropdowns
-            dropdowns.forEach(dropdown => {
-                dropdown.classList.remove('active');
-            });
+        /* Header & Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
-    });
-});
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 48px;
+            width: 48px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(67, 97, 238, 0.4);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
         /* Hero Section */
         .hero {
             padding: 160px 0 100px;
@@ -1543,7 +1140,7 @@ navLinksAll.forEach(link => {
         <p>Dukaane is India's best hyperlocal online grocery delivery app connecting customers with local kirana stores, fruit shops, vegetable vendors near you. Get fresh vegetables, fruits, dairy products, daily essentials, household items delivered to your doorstep with fast same-day delivery service.</p>
         
         <h3>Online Grocery Delivery in Major Indian Cities</h3>
-        <p>Available in Delhi, Mumbai, Bangalore, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad, Jaipur, Lucknow, Chandigarh, and other major cities. Search for "grocery store near me", "sabji wala near me", "kirana dukan near me", "fruit shop near me" on Dukaane app.</p>
+        <p>Available in Delhi, Mumbai, Bangalore, Hyderabad, Chennai, Kolkata, Bihar, Pune, Ahmedabad, Jaipur, Lucknow, Chandigarh, and other major cities. Search for "grocery store near me", "sabji wala near me", "kirana dukan near me", "fruit shop near me" on Dukaane app.</p>
         
         <h4>Why Choose Dukaane?</h4>
         <ul>
@@ -1558,36 +1155,41 @@ navLinksAll.forEach(link => {
         <p>Fresh vegetables online, fruits online, Amul milk delivery, Aashirvaad atta, bread and eggs, fresh paneer, daily essentials, pooja samagri, grocery items, packaged foods, beverages, personal care products, household items.</p>
     </div>
 
+    <!-- Header -->
     <header>
-    <div class="navbar">
-        <a href="https://res.cloudinary.com/digyet8lg/image/upload/v1767959260/klztigjawkdzcwikydk2.png" class="logo" data-page="home">
-            <img src="your-logo.png" alt="Dukaane Logo">
-            <div class="logo-text">
-                <h1>Dukaane</h1>
-                <span>Your Local Shopping Partner</span>
-            </div>
-        </a>
-        
-        <button class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
-        </button>
-        
-        <ul class="nav-links">
-            <li><a href="#" data-page="home"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#" data-page="apps"><i class="fas fa-mobile-alt"></i> Apps</a></li>
-            <li><a href="#" data-page="how-it-works"><i class="fas fa-cogs"></i> How It Works</a></li>
-            <li><a href="#" data-page="cities"><i class="fas fa-city"></i> Cities</a></li>
-            <li> <a href="#" data-page="about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                   <li> <a href="#" data-page="careers"><i class="fas fa-briefcase"></i> Careers</a></li>
-                   <li> <a href="#" data-page="contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                    <li><a href="#" data-page="faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
-                    <li><a href="#" data-page="privacy"><i class="fas fa-shield-alt"></i> Privacy</a></li>
-                    <li><a href="#" data-page="terms"><i class="fas fa-file-contract"></i> Terms</a></li>
-               
-            <li><a href="#" class="cta-button"><i class="fas fa-download"></i> Download App</a></li>
-        </ul>
-    </div>
-</header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo" data-page="home">
+                    <img src="https://res.cloudinary.com/digyet8lg/image/upload/v1762932081/download_1_rjaerj.png" alt="Dukaane Logo - Online Grocery Delivery App" itemprop="logo">
+                    <div class="logo-text">
+                        <h1 itemprop="name">Dukaane</h1>
+                        <span>Your Local Shopping Partner</span>
+                    </div>
+                </a>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#" class="active" data-page="home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#" data-page="apps"><i class="fas fa-mobile-alt"></i> Apps</a></li>
+                    <li><a href="#" data-page="how-it-works"><i class="fas fa-cogs"></i> How It Works</a></li>
+                    <li><a href="#" data-page="cities"><i class="fas fa-city"></i> Cities</a></li>
+                    
+                            <li><a href="#" data-page="about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                           <li> <a href="#" data-page="careers"><i class="fas fa-briefcase"></i> Careers</a></li>
+                           <li> <a href="#" data-page="contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                            <li><a href="#" data-page="faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                           <li> <a href="#" data-page="privacy"><i class="fas fa-shield-alt"></i> Privacy</a></li>
+                           <li> <a href="#" data-page="terms"><i class="fas fa-file-contract"></i> Terms</a></li>
+                      
+                    <li><a href="https://github.com/instapromoexchange/dukaane/raw/b38164c7af2f397b3f0caba190613d195205d1fa/Dukaane_1_1.0.apk" class="cta-button"><i class="fas fa-download"></i> Download App</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <!-- Breadcrumbs -->
     <div class="breadcrumbs">
         <div class="container">
@@ -1652,10 +1254,10 @@ navLinksAll.forEach(link => {
                             <p>Shop from local stores near you</p>
                         </div>
                         <div class="app-content">
-                            <p itemprop="description">Discover and order from local kirana stores, fruit shops, and vegetable vendors in your area. Get fresh groceries delivered to your doorstep.</p>
+                            <p itemprop="description">Discover and order from nearby local kirana stores, fruit & vegetable shops, and daily need vendors in your city. Get fresh products delivered quickly to your doorstep while supporting local businesses.</p>
                             <ul class="app-features">
                                 <li><i class="fas fa-check-circle"></i> Search stores near you</li>
-                                <li><i class="fas fa-check-circle"></i> Fresh vegetables & fruits</li>
+                                <li><i class="fas fa-check-circle"></i> Fresh vegetables, fruits & All Dali Needs Product </li>
                                 <li><i class="fas fa-check-circle"></i> Fast same-day delivery</li>
                                 <li><i class="fas fa-check-circle"></i> Multiple payment options</li>
                             </ul>
@@ -1677,7 +1279,7 @@ navLinksAll.forEach(link => {
                             <p>For local shop owners</p>
                         </div>
                         <div class="app-content">
-                            <p itemprop="description">Bring your kirana store online, manage inventory, accept orders, and grow your business with our easy-to-use shop management app.</p>
+                            <p itemprop="description">Bring your store online, manage inventory, accept orders, and grow your business with our easy-to-use shop management app.</p>
                             <ul class="app-features">
                                 <li><i class="fas fa-check-circle"></i> Easy store setup</li>
                                 <li><i class="fas fa-check-circle"></i> Inventory management</li>
@@ -1699,7 +1301,7 @@ navLinksAll.forEach(link => {
                                 <img src="https://res.cloudinary.com/digyet8lg/image/upload/v1767955383/rhnuta3bg9xfeuibh8ov.png" alt="Dukaane Delivery Partner App Icon" itemprop="image">
                             </div>
                             <h3 itemprop="name">Delivery Partner App</h3>
-                            <p>Earn by delivering groceries</p>
+                            <p>Earn by delivering product</p>
                         </div>
                         <div class="app-content">
                             <p itemprop="description">Become a delivery partner and earn money by delivering groceries from local stores to customers. Flexible hours, good earnings.</p>
@@ -2107,7 +1709,7 @@ navLinksAll.forEach(link => {
                     
                     <a href="#" class="city-card" data-city="bangalore">
                         <i class="fas fa-laptop-code"></i>
-                        <h3>Bangalore</h3>
+                        <h3>Bihar</h3>
                         <p>Available Now</p>
                     </a>
                     
@@ -2119,7 +1721,7 @@ navLinksAll.forEach(link => {
                     
                     <a href="#" class="city-card" data-city="chennai">
                         <i class="fas fa-beach-umbrella"></i>
-                        <h3>Bihar</h3>
+                        <h3>Chennai</h3>
                         <p>Available Now</p>
                     </a>
                     
@@ -2324,8 +1926,8 @@ navLinksAll.forEach(link => {
                             <div>
                                 <h3>Office Address</h3>
                                 <p>Dukaane Headquarters</p>
-                                <p>Narkatiaganj, West_Champaran</p>
-                                <p>Bihar 845455, India</p>
+                                <p>123 Business District, Bangalore</p>
+                                <p>Karnataka 560001, India</p>
                             </div>
                         </div>
                         
@@ -2391,7 +1993,7 @@ navLinksAll.forEach(link => {
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Dukaane - Your Complete Local Shopping Ecosystem. We provide fast same-day delivery of daily essentials.</p>
+                            <p>Dukaane is a hyperlocal online grocery delivery platform that connects customers with local kirana stores, vegetable vendors, and fruit shops. We provide fast same-day delivery of fresh groceries and daily essentials.</p>
                         </div>
                     </div>
                     
@@ -2606,7 +2208,7 @@ navLinksAll.forEach(link => {
                         <li><a href="#" data-page="apps"><i class="fas fa-shopping-cart"></i> Customer App</a></li>
                         <li><a href="#" data-page="apps"><i class="fas fa-store"></i> Shop Manager</a></li>
                         <li><a href="#" data-page="apps"><i class="fas fa-shipping-fast"></i> Delivery Partner</a></li>
-                        <li><a href="https://github.com/instapromoexchange/dukaane" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a></li>
+                       
                     </ul>
                 </div>
                 
@@ -2647,7 +2249,7 @@ navLinksAll.forEach(link => {
             </div>
             
             <div class="copyright">
-                <p>&copy; 2025 Dukaane. All rights reserved. | Complete Online Local Shopping Ecosystem In India</p>
+                <p>&copy; 2025 Dukaane. All rights reserved. | Complete Local Shopping Ecosystem App In India</p>
                 <p style="margin-top: 0.5rem;">Dukaane is registered trademarks</p>
             </div>
         </div>
@@ -2659,65 +2261,7 @@ navLinksAll.forEach(link => {
     </a>
 
     <!-- JavaScript -->
-    <script> 
-        // Make sure this is added to your existing JavaScript file
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-    
-    if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            this.innerHTML = navLinks.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
-        });
-    }
-    
-    // Mobile dropdown functionality
-    const dropdowns = document.querySelectorAll('.dropdown');
-    
-    if (window.innerWidth <= 768) {
-        dropdowns.forEach(dropdown => {
-            const dropdownLink = dropdown.querySelector('a');
-            dropdownLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                dropdown.classList.toggle('active');
-                
-                // Close other dropdowns
-                dropdowns.forEach(otherDropdown => {
-                    if (otherDropdown !== dropdown) {
-                        otherDropdown.classList.remove('active');
-                    }
-                });
-            });
-        });
-        
-        // Close dropdowns when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!e.target.closest('.dropdown')) {
-                dropdowns.forEach(dropdown => {
-                    dropdown.classList.remove('active');
-                });
-            }
-        });
-    }
-    
-    // Close mobile menu when clicking a link
-    const navLinksAll = document.querySelectorAll('.nav-links a');
-    navLinksAll.forEach(link => {
-        link.addEventListener('click', function() {
-            if (window.innerWidth <= 768) {
-                navLinks.classList.remove('active');
-                if (mobileMenuBtn) {
-                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                }
-            }
-        });
-    });
-});
+    <script>
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navLinks = document.getElementById('navLinks');
