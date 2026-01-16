@@ -1049,11 +1049,11 @@
             color: var(--gray);
         }
         .breadcrumbs {
-    /* ... existing properties ... */
-    visibility: hidden;
-    height: 0;
-    padding: 0;
-}
+            /* ... existing properties ... */
+            visibility: hidden;
+            height: 0;
+            padding: 0;
+        }
 
         /* Loading Animation */
         .loading {
@@ -1137,6 +1137,283 @@
             left: -1.5rem;
             color: var(--success);
         }
+
+        /* Team Profiles Styles - NEW */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-light);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .team-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+        }
+
+        .profile-image-container {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            position: relative;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover .profile-image {
+            transform: scale(1.05);
+        }
+
+        .team-info {
+            margin-bottom: 20px;
+        }
+
+        .team-info h3 {
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .team-info .position {
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .team-info .description {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .social-links-team {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social-icon-team {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(67, 97, 238, 0.1);
+            border-radius: 50%;
+            color: var(--primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon-team:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Team Member Specific Colors */
+        .team-member.founder::before {
+            background: linear-gradient(45deg, #4361ee, #3a0ca3);
+        }
+
+        .team-member.partner::before {
+            background: linear-gradient(45deg, #7209b7, #560bad);
+        }
+
+        .team-member.developer::before {
+            background: linear-gradient(45deg, #4cc9f0, #4895ef);
+        }
+
+        .team-member.operations::before {
+            background: linear-gradient(45deg, #4ade80, #22c55e);
+        }
+
+        /* Full Page Menu - NEW */
+        .full-page-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .full-page-menu.active {
+            display: flex;
+            opacity: 1;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .full-page-menu-content {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 800px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .full-page-menu-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .full-page-menu-close:hover {
+            background: rgba(67, 97, 238, 0.1);
+        }
+
+        .full-page-menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .full-page-menu-item {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--dark);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            border: 2px solid transparent;
+        }
+
+        .full-page-menu-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            background: white;
+            box-shadow: var(--shadow);
+        }
+
+        .full-page-menu-item i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .full-page-menu-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .full-page-menu-item p {
+            font-size: 0.875rem;
+            color: var(--gray);
+            margin: 0;
+        }
+
+        .full-page-menu-btn {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+            border: none;
+        }
+
+        .full-page-menu-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(67, 97, 238, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .full-page-menu-btn {
+                bottom: 1rem;
+                left: 1rem;
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+            }
+
+            .full-page-menu-content {
+                padding: 2rem 1rem;
+                width: 95%;
+            }
+
+            .full-page-menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .full-page-menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -1161,7 +1438,8 @@
         <h4>Popular Products Available</h4>
         <p>Fresh vegetables online, fruits online, Amul milk delivery, Aashirvaad atta, bread and eggs, fresh paneer, daily essentials, pooja samagri, grocery items, packaged foods, beverages, personal care products, household items.</p>
     </div>
- <!-- Breadcrumbs -->
+    
+    <!-- Breadcrumbs -->
     <div class="breadcrumbs">
         <div class="container">
             <ol itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -1172,6 +1450,97 @@
             </ol>
         </div>
     </div>
+    
+    <!-- Full Page Menu Button - NEW -->
+    <button class="full-page-menu-btn" id="fullPageMenuBtn">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <!-- Full Page Menu - NEW -->
+    <div class="full-page-menu" id="fullPageMenu">
+        <div class="full-page-menu-content">
+            <button class="full-page-menu-close" id="fullPageMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 style="text-align: center; margin-bottom: 1rem; color: var(--primary);">Dukaane - Complete Site Menu</h2>
+            <p style="text-align: center; color: var(--gray); margin-bottom: 2rem;">Navigate to any section of our website</p>
+            
+            <div class="full-page-menu-grid">
+                <a href="#" class="full-page-menu-item" data-page="home">
+                    <i class="fas fa-home"></i>
+                    <h3>Home</h3>
+                    <p>Main landing page</p>
+                </a>
+                
+                <a href="#" class="full-page-menu-item" data-page="apps">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Our Apps</h3>
+                    <p>Download our apps</p>
+                </a>
+                
+                <a href="#" class="full-page-menu-item" data-page="how-it-works">
+                    <i class="fas fa-cogs"></i>
+                    <h3>How It Works</h3>
+                    <p>Learn how to use</p>
+                </a>
+                
+                <a href="#" class="full-page-menu-item" data-page="cities">
+                    <i class="fas fa-city"></i>
+                    <h3>Cities</h3>
+                    <p>Available locations</p>
+                </a>
+                
+                <a href="#" class="full-page-menu-item" data-page="team-profiles">
+                    <i class="fas fa-users"></i>
+                    <h3>Our Team</h3>
+                    <p>Meet the founders</p>
+                </a>
+                
+                <a href="#" class="full-page-menu-item" data-page="about">
+                    <i class="fas fa-info-circle"></i>
+                    <h3>About Us</h3>
+                    <p>Our story & mission</p>
+                </a>
+                
+                <a href="#" class="full-page-menu-item" data-page="careers">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Careers</h3>
+                    <p>Join our team</p>
+                </a>
+                
+                <a href="#" class="full-page-menu-item" data-page="contact">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Contact</h3>
+                    <p>Get in touch</p>
+                </a>
+                
+                <a href="#" class="full-page-menu-item" data-page="faq">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>FAQ</h3>
+                    <p>Common questions</p>
+                </a>
+                
+                <a href="#" class="full-page-menu-item" data-page="privacy">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Privacy Policy</h3>
+                    <p>Data protection</p>
+                </a>
+                
+                <a href="#" class="full-page-menu-item" data-page="terms">
+                    <i class="fas fa-file-contract"></i>
+                    <h3>Terms of Service</h3>
+                    <p>Terms & conditions</p>
+                </a>
+                
+                <a href="https://github.com/instapromoexchange/dukaane/raw/b38164c7af2f397b3f0caba190613d195205d1fa/Dukaane_1_1.0.apk" class="full-page-menu-item" style="background: linear-gradient(45deg, var(--primary), var(--primary-dark)); color: white;">
+                    <i class="fas fa-download"></i>
+                    <h3>Download App</h3>
+                    <p>Get Dukaane now</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    
     <!-- Header -->
     <header>
         <div class="container">
@@ -1193,21 +1562,16 @@
                     <li><a href="#" data-page="apps"><i class="fas fa-mobile-alt"></i> Apps</a></li>
                     <li><a href="#" data-page="how-it-works"><i class="fas fa-cogs"></i> How It Works</a></li>
                     <li><a href="#" data-page="cities"><i class="fas fa-city"></i> Cities</a></li>
-                    
-                            <li><a href="#" data-page="about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                           <li> <a href="#" data-page="careers"><i class="fas fa-briefcase"></i> Careers</a></li>
-                           <li> <a href="#" data-page="contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                            <li><a href="#" data-page="faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
-                           <li> <a href="#" data-page="privacy"><i class="fas fa-shield-alt"></i> Privacy</a></li>
-                           <li> <a href="#" data-page="terms"><i class="fas fa-file-contract"></i> Terms</a></li>
-                      
+                    <li><a href="#" data-page="team-profiles"><i class="fas fa-users"></i> Our Team</a></li>
+                    <li><a href="#" data-page="about"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="#" data-page="careers"><i class="fas fa-briefcase"></i> Careers</a></li>
+                    <li><a href="#" data-page="contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="#" data-page="faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
                     <li><a href="https://github.com/instapromoexchange/dukaane/raw/b38164c7af2f397b3f0caba190613d195205d1fa/Dukaane_1_1.0.apk" class="cta-button"><i class="fas fa-download"></i> Download App</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
-   
 
     <!-- Home Page -->
     <section id="home-page" class="page-content active">
@@ -1778,6 +2142,29 @@
         </div>
     </section>
 
+    <!-- Team Profiles Page - NEW -->
+    <section id="team-profiles" class="page-content">
+        <div class="page-header">
+            <div class="container">
+                <h1>Our Team</h1>
+                <p>Meet the people behind Dukaane</p>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <div class="container">
+                <div class="content-card">
+                    <h2>Founders & Partners</h2>
+                    <p>We're a passionate team dedicated to transforming local commerce through technology.</p>
+                    
+                    <div class="team-grid" id="teamContainer">
+                        <!-- Team members will be loaded by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Page -->
     <section id="about" class="page-content">
         <div class="page-header">
@@ -2280,6 +2667,37 @@
                 : '<i class="fas fa-bars"></i>';
         });
 
+        // Full Page Menu - NEW
+        const fullPageMenuBtn = document.getElementById('fullPageMenuBtn');
+        const fullPageMenu = document.getElementById('fullPageMenu');
+        const fullPageMenuClose = document.getElementById('fullPageMenuClose');
+
+        fullPageMenuBtn.addEventListener('click', () => {
+            fullPageMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        fullPageMenuClose.addEventListener('click', () => {
+            fullPageMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close full page menu when clicking outside content
+        fullPageMenu.addEventListener('click', (e) => {
+            if (e.target === fullPageMenu) {
+                fullPageMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close full page menu with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && fullPageMenu.classList.contains('active')) {
+                fullPageMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
         // Page Navigation
         document.addEventListener('DOMContentLoaded', function() {
             // Set up page navigation
@@ -2313,6 +2731,10 @@
                 navLinks.classList.remove('active');
                 mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
                 
+                // Close full page menu
+                fullPageMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                
                 // Scroll to top
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
@@ -2324,6 +2746,7 @@
                     'apps': 'Apps',
                     'how-it-works': 'How It Works',
                     'cities': 'Cities',
+                    'team-profiles': 'Our Team',
                     'about': 'About Us',
                     'careers': 'Careers',
                     'contact': 'Contact',
@@ -2420,14 +2843,107 @@
                 });
             });
             
+            // Team Members Data - NEW
+            const teamMembers = [
+                {
+                    id: 1,
+                    name: "RUDR CHAUHAN",
+                    position: "Founder & CEO",
+                    description: "Founder & Chief Executive Officer (CEO) of Dukaane।",
+                    image: "https://res.cloudinary.com/digyet8lg/image/upload/v1763537341/Rudra1_uvegzu.jpg",
+                    type: "founder",
+                    socialLinks: [
+                       // { platform: "linkedin", url: "#", icon: "fab fa-linkedin-in" },
+                      //  { platform: "twitter", url: "#", icon: "fab fa-twitter" },
+                        { platform: "instagram", url: "https://www.instagram.com/rudra_chauhan05?igsh=dG4zanB4Y2huMmJ5", icon: "fab fa-instagram" },
+                        { platform: "facebook", url: "https://www.facebook.com/share/16iWWBwDNg/", icon: "fab fa-facebook-f" }
+                    ]
+                },
+                {
+                    id: 2,
+                    name: "R-RUBI",
+                    position: "Co-Founder & CTO",
+                    description: "Technology Director and Chief Architect of Dukaane",
+                    image: "https://res.cloudinary.com/digyet8lg/image/upload/v1762931944/cld-sample-2.jpg",
+                    type: "partner",
+                    socialLinks: [
+                       { platform: "instagram", url: "#", icon: "fab fa-instagram" },
+                        { platform: "facebook", url: "#", icon: "fab fa-facebook-f" }
+                    ]
+                },
+                {
+                    id: 3,
+                    name: "KUNDAN MAHTO",
+                    position: "Head of Operations",
+                    description: "Head of Operations and Responsible for Business Development",
+                    image: "https://res.cloudinary.com/digyet8lg/image/upload/v1768565043/WhatsApp_Image_2026-01-16_at_5.27.47_PM_tf0gxv.jpg",
+                    type: "operations",
+                    socialLinks: [
+                        { platform: "instagram", url: "#", icon: "fab fa-instagram" },
+                        { platform: "facebook", url: "#", icon: "fab fa-facebook-f" }
+                    ]
+                },
+                {
+                    id: 4,
+                    name: "ABHISHEK CHAUHAN",
+                    position: "Head of Marketing",
+                    description: "Head of Marketing and Customer Relationship Management",
+                    image: "https://res.cloudinary.com/digyet8lg/image/upload/v1768565043/WhatsApp_Image_2026-01-16_at_5.28.23_PM_b2lmdg.jpg",
+                    type: "operations",
+                    socialLinks: [
+                       { platform: "instagram", url: "#", icon: "fab fa-instagram" },
+                        { platform: "facebook", url: "#", icon: "fab fa-facebook-f" }
+                    ]
+                }
+            ];
+            
+            // Function to create team member HTML - NEW
+            function createTeamMemberHTML(member) {
+                // Create social links HTML
+                let socialLinksHTML = '';
+                member.socialLinks.forEach(link => {
+                    socialLinksHTML += `
+                        <a href="${link.url}" class="social-icon-team" target="_blank" aria-label="${link.platform}">
+                            <i class="${link.icon}"></i>
+                        </a>
+                    `;
+                });
+
+                // Return full member HTML
+                return `
+                    <div class="team-member ${member.type}">
+                        <div class="profile-image-container">
+                            <img src="${member.image}" alt="${member.name}" class="profile-image">
+                        </div>
+                        <div class="team-info">
+                            <h3>${member.name}</h3>
+                            <div class="position">${member.position}</div>
+                            <p class="description">${member.description}</p>
+                        </div>
+                        <div class="social-links-team">
+                            ${socialLinksHTML}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Function to load team members - NEW
+            function loadTeamMembers() {
+                const teamContainer = document.getElementById('teamContainer');
+                if (!teamContainer) return;
+
+                // Clear container
+                teamContainer.innerHTML = '';
+
+                // Add each team member
+                teamMembers.forEach(member => {
+                    teamContainer.innerHTML += createTeamMemberHTML(member);
+                });
+            }
+            
             // Initialize first page
             showPage('home');
-            
-            // Add structured data for current page
-            function updateStructuredData(pageId) {
-                // This function would update structured data based on current page
-                // For simplicity, we're using static structured data in the head
-            }
+            loadTeamMembers(); // Load team members on page load
             
             // Smooth scroll for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -2473,6 +2989,7 @@
                         'apps': 'Download Dukaane apps - Customer app, Shop Manager app, and Delivery Partner app. Transform your local shopping experience.',
                         'how-it-works': 'Learn how Dukaane works - For customers, shop owners, and delivery partners. Simple steps to get started.',
                         'cities': 'Dukaane available cities - Currently serving major Indian cities with plans to expand. Check if we\'re in your city.',
+                        'team-profiles': 'Meet the Dukaane team - Founders, partners, and leadership team behind India\'s fastest growing grocery delivery platform.',
                         'about': 'About Dukaane - Our story, mission, and values. Learn how we\'re transforming local commerce.',
                         'careers': 'Careers at Dukaane - Join our team and help transform local commerce. View current job openings.',
                         'contact': 'Contact Dukaane - Get in touch with our team for support, partnerships, or inquiries.',
